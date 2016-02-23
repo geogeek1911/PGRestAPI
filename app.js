@@ -137,7 +137,7 @@ app.all('/services', function (req, res) {
 
 
 //Configure HTTPS if present
-if(settings.ssl && settings.ssl.pfx && settings.ssl.password){
+if(settings.ssl && settings.ssl.pfx) { // && settings.ssl.password){
   //Use HTTPS
   var SSLoptions = {
     pfx: fs.readFileSync(settings.ssl.pfx),
